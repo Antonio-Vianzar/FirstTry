@@ -3,7 +3,7 @@ using UnityEngine;
 public class Skrip : MonoBehaviour
 {
     public Rigidbody2D Mybody;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float flapstrenght;
     void Start()
     {
         gameObject.name = "Red Seed";
@@ -14,7 +14,7 @@ public class Skrip : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
-            Mybody.linearVelocity = Vector2.up * 10;
+            Mybody.linearVelocity = Vector2.up * flapstrenght;
         }
     }
 }
