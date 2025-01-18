@@ -5,6 +5,7 @@ public class Summon : MonoBehaviour
     public GameObject pipe;
     public float spawnrate = 3;
     private float timer = 0;
+    public float heigtofset = 10;
 
     void Start()
     {
@@ -26,6 +27,8 @@ public class Summon : MonoBehaviour
     }
     void spawnpipe()
     {
-        Instantiate(pipe, transform.position, transform.rotation);
+        float lowestpoint = transform.position.y - heigtofset;
+        float highestpoint = transform.position.y + heigtofset;
+        Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestpoint, highestpoint), 0), transform.rotation);
     }
 }
