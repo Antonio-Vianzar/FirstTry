@@ -14,4 +14,12 @@ public class Logic : MonoBehaviour
         Score = Score + scoretoadd;
         scoretext.text = Score.ToString();
     }
+    public void restartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void gameover()
+    {
+        gameoverscreen.SetActive(true);
+    }
 }
